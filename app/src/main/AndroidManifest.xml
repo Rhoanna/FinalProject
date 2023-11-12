@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Lab8"
         tools:targetApi="34">
         <activity
+            android:name=".FinalProject"
+            android:exported="false" />
+        <activity
             android:name=".DadJoke"
             android:exported="false" />
         <activity
