@@ -11,4 +11,7 @@ public class FinalProject extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_final_project);
     }
+
+
+
 }
