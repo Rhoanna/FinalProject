@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    tools:context=".FinalProject">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="4dp"
+        android:gravity="center"
+        android:background="@color/design_default_color_primary"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:visibility="visible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/right_icon1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBaseline_toTopOf="parent"
+        android:layout_centerVertical="true"
+        android:src="@drawable/dog"
+        android:contentDescription="dog" />
+
+    <ImageView
+        android:visibility="visible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBaseline_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:id="@+id/right_icon2"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/dragon"
+        android:contentDescription="dragon" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/uriTitles"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:text="asdfasd"
+
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+
+
+            app:layout_constraintTop_toBottomOf="@+id/my_toolbar" />
+
+    <TextView
+        android:id="@+id/uriDescriptions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="asdfads"
+
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+
+
+        app:layout_constraintEnd_toEndOf="@+id/uriTitles"
+        app:layout_constraintStart_toStartOf="@+id/uriTitles"
+        app:layout_constraintTop_toBottomOf="@+id/uriTitles" />
+
+    <TextView
+        android:id="@+id/uriDates"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="asdfas"
+
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/uriDescriptions"
+        app:layout_constraintStart_toStartOf="@+id/uriDescriptions"
+        app:layout_constraintTop_toBottomOf="@+id/uriDescriptions" />
+
+    <TextView
+        android:id="@+id/uriLinks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="asdfads"
+
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+
+        app:layout_constraintEnd_toEndOf="@+id/uriDates"
+        app:layout_constraintStart_toStartOf="@+id/uriDates"
+        app:layout_constraintTop_toBottomOf="@+id/uriDates" />
+
+</LinearLayout>
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="MissingConstraints" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

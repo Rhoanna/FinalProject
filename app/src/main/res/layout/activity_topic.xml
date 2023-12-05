@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_drawer_layout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FinalProject"
+    tools:ignore="HardcodedText"
+    android:gravity="center_vertical" >
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="1">
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/my_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="?attr/actionBarSize"
+            android:elevation="4dp"
+            android:gravity="center"
+            android:background="@color/design_default_color_primary"
+            tools:ignore="MissingConstraints"
+            android:layout_weight="0"/>
+
+        <ImageView
+            android:visibility="visible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/right_icon1"
+            android:layout_gravity="end|center_vertical"
+            android:src="@drawable/dog"
+            android:contentDescription="dog"
+            android:layout_weight="0"/>
+
+        <ImageView
+            android:visibility="visible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|center_vertical"
+            android:id="@+id/right_icon2"
+            android:src="@drawable/dragon"
+            android:contentDescription="dragon"
+            android:layout_weight="0"/>
+
+
+
+        <TextView
+            android:id="@+id/uriTitles"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:text=""
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@+id/my_toolbar" />
+
+        <TextView
+            android:id="@+id/uriDescriptions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/uriTitles"
+            app:layout_constraintStart_toStartOf="@+id/uriTitles"
+            app:layout_constraintTop_toBottomOf="@+id/uriTitles" />
+
+        <TextView
+            android:id="@+id/uriDates"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/uriDescriptions"
+            app:layout_constraintStart_toStartOf="@+id/uriDescriptions"
+            app:layout_constraintTop_toBottomOf="@+id/uriDescriptions" />
+
+        <TextView
+            android:id="@+id/uriLinks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/uriDates"
+            app:layout_constraintStart_toStartOf="@+id/uriDates"
+            app:layout_constraintTop_toBottomOf="@+id/uriDates" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:id="@+id/webpageButton"
+            android:text="go to url"            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:id="@+id/saveButton"
+            android:text="save this link"            />
+        <FrameLayout
+            android:id="@+id/frame_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_weight="0.01"/>
+
+    </LinearLayout>
+
+    <!-- this the navigation view which draws and shows the navigation drawer -->
+    <!-- include the menu created in the menu folder -->
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="start"
+        app:menu="@menu/navigation_drawer"
+        android:id="@+id/navigationView"/>
+</androidx.drawerlayout.widget.DrawerLayout>
